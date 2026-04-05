@@ -1,7 +1,7 @@
 # 🎙️ Voice-Controlled RGB LED via Edge AI (TinyML)
 
 **Module:** CASA0018 - Connected Environments  
-**Author:** [Jiahua He]
+**Author:** Jiahua He
 
 [![Arduino](https://img.shields.io/badge/Platform-Arduino-blue.svg)](https://www.arduino.cc/)
 [![Edge Impulse](https://img.shields.io/badge/TinyML-Edge_Impulse-lightgrey.svg)](https://www.edgeimpulse.com/)
