@@ -14,18 +14,18 @@ This project explores the deployment of Machine Learning on resource-constrained
 **🧠 Model Evolution & Critical Reflection**
 A core objective of this project was to understand how model architecture impacts edge deployment. Throughout the project, three model iterations were tested:
 
-V1 (Baseline): A foundational model that initially suffered from severe underfitting (20% accuracy). This was resolved by tuning the optimizer's learning rate from 0.01 to 0.001, highlighting the importance of hyperparameter optimization.
+V1 (Basic Version): An initial basic model with some initial issues, consisting of only three colors - red, blue, and green, and without including any noise data.
 
 V2 (Custom 1D CNN - Deployed Version): A lightweight CNN trained from scratch on MFCC features. It achieved a 92.6% test accuracy, requiring only 12.6K RAM and 3ms inference time. This model provided the perfect "Model-Data Fit" for the limited dataset (approx. 55 samples per class).
 
-V3 (MobileNetV2 Transfer Learning): An experimental iteration to test if a pre-trained architecture could improve robustness. However, accuracy dropped to 74.6%, with a significant increase in 'Uncertain' classifications and memory overhead.
+V3 (MobileNetV2 Transfer Learning): An experimental iteration to test if a pre-trained architecture could improve robustness. However, accuracy dropped to 74.6%, with a significant increase in 'Uncertain' classifications, inferencing latency and memory overhead.The inferencing latency was 644 ms, whilst the peak SRAM memory footprint was 168.5 KB. The inference time and RAM usage are much higher than those of the V2 model.
 
 Key Takeaway: Bigger is not always better in TinyML. Deploying massive pre-trained models on small, local datasets can lead to confidence dilution. The V2 lightweight CNN was selected as the final deployed model due to its optimal balance of accuracy and computational efficiency.
 
 **⚙️ Hardware & Software Requirements**
 Hardware: Arduino Nano 33 BLE Sense (Microphone and onboard Common-Anode RGB LED utilized).
 
-Software: Arduino IDE (v2.x recommended).
+Software: Arduino IDE
 
 ML Pipeline: Edge Impulse Studio.
 
