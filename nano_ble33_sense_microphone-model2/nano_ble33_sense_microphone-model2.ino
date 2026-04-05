@@ -71,7 +71,7 @@ void loop() {
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
 
         // If the probability of a class exceeds the 0.8 threshold
-        if (result.classification[ix].value > 0.6) {
+        if (result.classification[ix].value > 0.8) {
             String label = result.classification[ix].label;
 
             // 1. Color command processing
